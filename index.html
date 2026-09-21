@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="announcement">✨ Free delivery on orders above ₹999 <span>•</span> Easy 7-day returns</div>
+  <div class="announcement">🔥 LP Deals • Special Offers <span>•</span> Limited Stock</div>
   <header>
     <a class="logo" href="#home">LP<span>Deal</span></a>
     <button class="menu-button" aria-label="Open menu">☰</button>
@@ -29,10 +29,10 @@
   <main id="home">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">CURATED FOR EVERYDAY</p>
-        <h1>Small finds.<br><em>Big delight.</em></h1>
-        <p class="hero-description">Thoughtful essentials and little luxuries, selected to make every day feel a little more special.</p>
-        <a class="button button-dark" href="#shop">Shop the collection <span>→</span></a>
+        <p class="eyebrow">LP DEALS • SPECIAL OFFERS</p>
+        <h1>Smart deals.<br><em>More savings.</em></h1>
+        <p class="hero-description">Daily-use products, beauty essentials and household favourites at special LP Deal prices.</p>
+        <a class="button button-dark" href="#shop">Shop LP Deals <span>→</span></a>
       </div>
       <div class="hero-art" aria-label="Decorative shopping collection illustration">
         <div class="sun"></div><div class="arch arch-one"></div><div class="arch arch-two"></div>
@@ -47,17 +47,22 @@
     </section>
 
     <section class="section categories" id="categories">
-      <div class="section-heading"><div><p class="eyebrow">SHOP BY MOOD</p><h2>Find your next favorite</h2></div><a href="#shop">View all →</a></div>
+      <div class="section-heading"><div><p class="eyebrow">LP DEALS</p><h2>Shop by category</h2></div><a href="#shop">View all →</a></div>
       <div class="category-grid">
         <a href="#shop" class="category warm"><span>Home & Living</span><b>Explore →</b></a>
         <a href="#shop" class="category blue"><span>Beauty & Care</span><b>Explore →</b></a>
-        <a href="#shop" class="category green"><span>Everyday Style</span><b>Explore →</b></a>
+        <a href="#shop" class="category green"><span>Everyday Essentials</span><b>Explore →</b></a>
         <a href="#shop" class="category pink"><span>Gifts & More</span><b>Explore →</b></a>
       </div>
     </section>
 
+    <section class="deal-catalog-callout">
+      <div><p class="eyebrow">DEAL CATALOG</p><h2>All LP Deals in one place.</h2><p>Browse the live product listing below or open the printable catalog.</p></div>
+      <a class="button button-dark" href="LP_Deals_Catalog.pdf" target="_blank">Open Catalog →</a>
+    </section>
+
     <section class="section products" id="shop">
-      <div class="section-heading"><div><p class="eyebrow">MOST LOVED</p><h2>Popular right now</h2></div><button class="filter-button">Filter & sort ⌄</button></div>
+      <div class="section-heading"><div><p class="eyebrow">LP DEALS</p><h2>Today’s special offers</h2></div><button class="filter-button">Filter deals ⌄</button></div>
       <div class="product-grid" id="product-grid"></div>
     </section>
 
@@ -70,7 +75,17 @@
   </main>
 
   <footer><a class="logo" href="#home">LP<span>Deal</span></a><p>© 2026 LP Deal. Made with care.</p><div><a href="#">Instagram</a><a href="#">WhatsApp</a><a href="#">Contact</a></div></footer>
-  <aside class="cart-panel" aria-label="Your cart"><div class="cart-title"><h2>Your bag</h2><button class="close-cart">×</button></div><div id="cart-items"><p class="empty-cart">Your bag is waiting for a good find.</p></div><div class="cart-footer"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="button button-dark checkout">Checkout securely →</button></div></aside><div class="overlay"></div>
+  <aside class="cart-panel" aria-label="Your cart"><div class="cart-title"><h2>Your bag</h2><button class="close-cart">×</button></div><div id="cart-items"><p class="empty-cart">Your bag is waiting for a good find.</p></div><div class="cart-footer"><div><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="button button-dark checkout">Order on WhatsApp →</button></div></aside><div class="overlay"></div>
   <script src="script.js"></script>
-</body>
+<div class="product-modal" id="product-modal" aria-hidden="true">
+<div class="product-modal-backdrop" data-close-product></div>
+<div class="product-modal-card" role="dialog" aria-modal="true">
+<button class="product-modal-close" data-close-product>×</button>
+<div class="product-modal-image"><img id="modal-image" src="" alt=""></div>
+<div class="product-modal-content">
+<span class="modal-badge" id="modal-badge"></span><p class="eyebrow" id="modal-category"></p>
+<h2 id="modal-name"></h2><div class="modal-price" id="modal-price"></div><p class="modal-offer" id="modal-offer"></p>
+<div class="quantity-row"><button id="qty-minus" type="button">−</button><strong id="modal-qty">1</strong><button id="qty-plus" type="button">+</button></div>
+<div class="modal-actions"><button class="button button-dark" id="modal-add">Add to Bag</button><button class="button whatsapp-button" id="modal-whatsapp">Order on WhatsApp</button></div>
+</div></div></div></body>
 </html>
